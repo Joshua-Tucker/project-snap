@@ -8,25 +8,56 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        CardGame cardgame =new CardGame();
+        Snap snap = new Snap();
+        Player player = new Player();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Would you like Ace to be HIGH or LOW?");
-        System.out.println("Type HIGH or LOW");
-        String answer = scanner.nextLine().toLowerCase();
-        if (answer.contains("high")) {
-            cardgame.populateHighDeck();
-        } else {
-            cardgame.populateLowDeck();
+        player.aceHighOrLow(snap);
+        player.setPlayer();
+        snap.dealRandomOrder();
+        snap.dealNewCardStart();
+
+        while (true) {
+            System.out.println(player.getCurrentPlayer() + "'s turn.");
+            snap.dealNewCardAfter();
+            String input = scanner.nextLine();
+            while (!input.equals("")) {
+                System.out.println(player.getCurrentPlayer() + "'s turn.");
+                snap.dealNewCardAfter();
+                input = scanner.nextLine();
+
+            }
+
+            if (player.getCurrentPlayer() == player.getPlayer1()) {
+                player.setCurrentPlayer(player.getPlayer2());
+            } else {
+                player.setCurrentPlayer(player.getPlayer1());
+            }
+
         }
-        System.out.println(cardgame.dealTopCard());
-        System.out.println(cardgame.dealTopCard());
-        System.out.println(cardgame.dealTopCard());
+
+//        player.playerTurn();
+//        player.playTwoPlayerGame();
+//
+
+
+//        snap.dealNewCardAfter();
+//        snap.dealNewCardAfter();
+//        snap.dealNewCardAfter();
+
+
+//
+//        cardgame.dealTopCard();
+//        cardgame.dealTopCard();
+//        cardgame.dealTopCard();
+
+
 //        cardgame.dealSymbolOrder();
 //        cardgame.dealSuitOrder();
-        cardgame.dealRandomOrder();
-        System.out.println("To prove this is different...");
-        cardgame.dealRandomOrder();
-
+//        System.out.println("To prove this is different...");
+//        cardgame.dealRandomOrder();
+//        Snap.playTwoPlayerGame();
+//        System.out.println(cardgame.getDeckOfCards());
+//        snap.dealNewCard();
 
     }
 }

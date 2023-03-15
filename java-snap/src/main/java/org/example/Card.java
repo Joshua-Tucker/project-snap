@@ -39,28 +39,8 @@ public class Card {
     }
 
 
-    public static Comparator<Card> CardCompValue = new Comparator<Card>() {
-        public int compare(Card o1, Card o2) {
-            int cardValue1 = o1.getValue();
-            int cardValue2 = o2.getValue();
-            return cardValue1 - cardValue2;
-        }
-    };
-    public static Comparator<Card> CardCompSuit = new Comparator<Card>() {
-        public int compare(Card o1, Card o2) {
-            String cardValue1 = o1.getSuit();
-            String cardValue2 = o2.getSuit();
-            return cardValue1.compareTo(cardValue2);
-        }
-    };
 
-    public static Comparator<Card> CardCompRandom = new Comparator<Card>() {
-        public int compare(Card o1, Card o2) {
-            String cardValue1 = o1.getSuit();
-            String cardValue2 = o2.getSuit();
-            return cardValue1.compareTo(cardValue2);
-        }
-    };
+
 
 //    @Override
 //    public String toString() {
