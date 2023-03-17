@@ -24,7 +24,6 @@ public class Main {
                 break;
             }
             String input = scanner.nextLine();
-
             while (!input.equals("")) {
                 System.out.println(player.getCurrentPlayer() + "'s turn.");
                 snap.dealNewCardAfter();
@@ -35,13 +34,7 @@ public class Main {
                 }
                 input = scanner.nextLine();
             }
-
-
-            if (player.getCurrentPlayer() == player.getPlayer1()) {
-                player.setCurrentPlayer(player.getPlayer2());
-            } else {
-                player.setCurrentPlayer(player.getPlayer1());
-            }
+            player.playerTurn();
         }
     }
 }

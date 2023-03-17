@@ -56,6 +56,14 @@ public class Player {
         System.out.println("Thanks " + getPlayer2() + "! Let's play SNAP!!!");
     }
 
+    public void playerTurn(){
+        if (getCurrentPlayer() == getPlayer1()) {
+            setCurrentPlayer(getPlayer2());
+        } else {
+           setCurrentPlayer(getPlayer1());
+        }
+    }
+
 
 
 
