@@ -11,8 +11,12 @@ public class Main {
         Snap snap = new Snap();
         Player player = new Player();
         Scanner scanner = new Scanner(System.in);
-        player.aceHighOrLow(snap);
         player.setPlayer();
+        player.aceHighOrLow(snap);
+//        snap.dealSuitOrder();
+//        System.out.println("");
+//        snap.dealSymbolOrder();
+//        System.out.println("");
         snap.dealRandomOrder();
         snap.dealNewCardStart();
         while (true) {

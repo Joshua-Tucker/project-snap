@@ -42,6 +42,8 @@ public class Player {
         } else {
             snap.populateLowDeck();
         }
+        System.out.println("Okay, lets set the deck!");
+        System.out.println(" ");
     }
 
     public void setPlayer(){
@@ -53,7 +55,8 @@ public class Player {
         System.out.println("Thanks " + getPlayer1() + "! Player 2, what's your name?");
         String player2Name = scanner.nextLine();
         setPlayer2(player2Name);
-        System.out.println("Thanks " + getPlayer2() + "! Let's play SNAP!!!");
+        System.out.println("Thanks " + getPlayer2() + "!");
+        System.out.println(" ");
     }
 
     public void playerTurn(){

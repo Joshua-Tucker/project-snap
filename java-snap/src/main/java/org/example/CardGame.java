@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 
-public  abstract class CardGame {
+public abstract class CardGame {
 
     public ArrayList<Card> deckOfCards = new ArrayList();
     private ArrayList<Card> dealtCards = new ArrayList<>();
@@ -40,14 +40,6 @@ public  abstract class CardGame {
         this.showTwoCards = showTwoCards;
     }
 
-
-    //    public ArrayList<Card> deckOfCards {
-//        return deckOfCards;
-//    }
-
-//    public void setDeckOfCards(ArrayList<Card> deckOfCards) {
-//        this.deckOfCards = deckOfCards;
-//    }
 
     public ArrayList<Card> getDealtCards() {
         return dealtCards;
@@ -103,16 +95,11 @@ public  abstract class CardGame {
 
     public void populateHighDeck() {
         highAce();
-//        for (Card card : deckOfCards) {
-//            System.out.println(card.toString());
-//        }
     }
 
     public void populateLowDeck() {
         lowAce();
-//        for (Card card : deckOfCards) {
-//            System.out.println(card.toString());
-//        }
+
     }
 
 
@@ -120,7 +107,6 @@ public  abstract class CardGame {
         Card topCard = deckOfCards.get(0);
         getDealtCards().add(0, topCard);
         getShowTwoCards().add(0, topCard);
-//        System.out.println(topCard);
         deckOfCards.remove(0);
 
     }
@@ -147,10 +133,12 @@ public  abstract class CardGame {
         Collections.shuffle(deckOfCards);
         sortDeckRandom.addAll(deckOfCards);
         System.out.println("The cards have now been shuffled!");
-//        System.out.println(deckOfCards);
-//        System.out.println(sortDeckRandom);
+        System.out.println("LETS PLAY SOME SNAP!!");
+        System.out.println(" ");
+        System.out.println(" ");
+    }
 
-    };
+    ;
 
 
 //END

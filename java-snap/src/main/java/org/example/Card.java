@@ -1,8 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-
 public class Card {
     public Card(String suit, String symbol, int value) {
         this.suit = suit;
@@ -39,13 +36,6 @@ public class Card {
     }
 
 
-
-
-
-//    @Override
-//    public String toString() {
-//        return "This is the " + symbol + " of " + suit + ". Its value is " + value;
-//    }
     @Override
     public String toString() {
         return symbol + " of " + suit ;
